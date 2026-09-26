@@ -1,0 +1,133 @@
+@import "tailwindcss";
+
+@theme {
+	--color-paper: var(--paper);
+	--color-paper2: var(--paper-2);
+	--color-ink: var(--ink);
+	--color-inkdim: var(--ink-dim);
+	--color-coral: var(--coral);
+	--color-teal: var(--teal);
+	--color-violet: var(--violet);
+	--color-gold: var(--gold);
+	--color-line: var(--line);
+	--color-linesoft: var(--line-soft);
+	--screens-md: "760px";
+	--font-display: /*"Manrope",*/ sans-serif;
+	--font-body: /*"Work Sans",*/ sans-serif;
+}
+
+/* ===== Shared design tokens ===== */
+:root {
+	--paper: #fbfaf6;
+	--paper-2: #f2f0e8;
+	--ink: #171522;
+	--ink-dim: #5c5a6e;
+	--coral: #ff5a3c;
+	--teal: #0e8f82;
+	--violet: #5b44e0;
+	--gold: #ffb627;
+	--line: #e4e1d4;
+	--line-soft: #ece9dc;
+}
+@media (prefers-color-scheme: dark) {
+	:root:not([data-theme="light"]) {
+		--paper: #15131f;
+		--paper-2: #1d1a2b;
+		--ink: #f4f2ea;
+		--ink-dim: #a9a6bc;
+		--coral: #ff7a5c;
+		--teal: #2bc4b3;
+		--violet: #8a79ff;
+		--gold: #ffc94d;
+		--line: #332f45;
+		--line-soft: #282438;
+	}
+}
+:root[data-theme="dark"] {
+	--paper: #15131f;
+	--paper-2: #1d1a2b;
+	--ink: #f4f2ea;
+	--ink-dim: #a9a6bc;
+	--coral: #ff7a5c;
+	--teal: #2bc4b3;
+	--violet: #8a79ff;
+	--gold: #ffc94d;
+	--line: #332f45;
+	--line-soft: #282438;
+}
+:root[data-theme="light"] {
+	--paper: #fbfaf6;
+	--paper-2: #f2f0e8;
+	--ink: #171522;
+	--ink-dim: #5c5a6e;
+	--coral: #ff5a3c;
+	--teal: #0e8f82;
+	--violet: #5b44e0;
+	--gold: #ffb627;
+	--line: #e4e1d4;
+	--line-soft: #ece9dc;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+body {
+	background: var(--paper);
+	color: var(--ink);
+}
+::selection {
+	background: var(--coral);
+	color: var(--paper);
+}
+
+.sticky {
+	position: sticky;
+	background: transparent;
+}
+
+/* Hero */
+.hero-glow {
+	background:
+		radial-gradient(
+			38% 42% at 12% 18%,
+			color-mix(in srgb, var(--coral) 32%, transparent) 0%,
+			transparent 72%
+		),
+		radial-gradient(
+			34% 40% at 82% 8%,
+			color-mix(in srgb, var(--violet) 28%, transparent) 0%,
+			transparent 70%
+		),
+		radial-gradient(
+			30% 34% at 70% 70%,
+			color-mix(in srgb, var(--gold) 26%, transparent) 0%,
+			transparent 70%
+		);
+	filter: blur(6px);
+}
+.mark {
+	background: linear-gradient(
+		180deg,
+		transparent 62%,
+		color-mix(in srgb, var(--gold) 65%, transparent) 62%
+	);
+}
+.badge-spin {
+	animation: spin 22s linear infinite;
+	transform-origin: center;
+	transform-box: fill-box;
+}
+@keyframes spin {
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+	.badge-spin {
+		animation: none;
+	}
+}
