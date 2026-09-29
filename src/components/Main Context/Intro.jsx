@@ -1,3 +1,15 @@
+const links = [
+	{
+		linkedin: "",
+	},
+	{
+		github: "github.com/YuvrajAGarg081",
+	},
+	{
+		portfolio: "garginfo.co.in",
+	},
+];
+
 const Intro = () => {
 	return (
 		<section id="home" className="relative isolate overflow-hidden">
@@ -10,15 +22,10 @@ const Intro = () => {
 				<div className="grid grid-cols-1 md:grid-cols-[1fr_0.9fr] gap-12 md:gap-[4vw] items-center">
 					<div>
 						<div className="inline-flex item-center gap-2 rounded-full bg-paper2 border border-line px-3.5 py-1.5 mb-6">
-							<span className="w-1.5 h-1.5 rounded-full bg-teal shadow-[0_0_0_3px_color-mix(in_srgb,var(--teal)_22%,transparent)]"></span>
+							<span className="w-1.5 h-1.5 rounded-full bg-teal shadow-[0_0_0_3px_color-mix(in_srgb,var(--teal)_22%,transparent)]" />{" "}
 							<span className="text-xs font-medium text-inkdim">Open to Work</span>
 						</div>
-						<div className="flex items-center gap-2 text-inkdim font-medium text-lg mb-2">
-							Hi,
-							{/* <svg viewBox="0 0 24 24" className="w-4 h-4 text-gold" fill="currentColor">
-								<path d="M12 211.8 6.2L20 101-6.2 1.8L12 181-1.8-6.2L4 1016.2-1.8z" />
-							</svg> */}
-						</div>
+						<div className="flex items-center gap-2 text-inkdim font-medium text-lg mb-2">Hi,</div>
 
 						<h1 className="font-display font-bold text-[clamp(2.2rem,6vw,3.4rem)] leading-[1.15] mb-6">
 							I&rsquo;m <span className="text-coral">Yuvraj Garg</span>
@@ -27,8 +34,8 @@ const Intro = () => {
 						</h1>
 
 						<p className="max-w-[42ch] text-inkdim text-[1.05rem] leading-relaxed mb-7">
-							I design small products and write about the process — based in Bristol, working with
-							teams who want the boring parts done well too.
+							I design small products and write about the process — based in Bristol, working with teams who want the
+							boring parts done well too.
 						</p>
 
 						<a
@@ -54,17 +61,11 @@ const Intro = () => {
 
 						<div className="flex items-centers gap-3">
 							<a
-								href="#"
+								href={"https://linkedin.com/in/yuvraj-garg0187"}
 								aria-label="LindedIn profile"
 								className="w-9 h-9 flex items-center justify-center rounded-full bg-coral/10 text-coral hover:bg-coral hover:text-white transition-colors"
 							>
-								<svg
-									viewBox="0 0 24 24"
-									className="w-4 h-4"
-									fill="none"
-									stroke="currentColor"
-									strokeWidth="1.6"
-								>
+								<svg viewBox="0 0 24 24" className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="1.6">
 									<rect x={3} y={3} width={18} height={18} rx={3} />
 									<line x1={7} y1={10} x2={7} y2={17} />
 									<circle cx={7} cy={7} r={0.6} fill="currentColor" stroke="none" />
@@ -73,33 +74,21 @@ const Intro = () => {
 								</svg>
 							</a>
 							<a
-								href="#"
+								href={links.github}
 								aria-label="Code repository"
 								className="w-9 h-9 flex items-center justify-center rounded-full bg-teal/10 text-teal hover:bg-teal hover:text-white transition-colors"
 							>
-								<svg
-									viewBox="0 0 24 24"
-									className="w-4 h-4"
-									fill="none"
-									stroke="currentColor"
-									strokeWidth="1.6"
-								>
+								<svg viewBox="0 0 24 24" className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="1.6">
 									<polyline points="8 7 3 12 8 17" />
 									<polyline points="16 7 21 12 16 17" />
 								</svg>
 							</a>
 							<a
-								href="#"
+								href={links.portfolio}
 								aria-label="Portfolio"
 								className="w-9 h-9 flex items-center justify-center rounded-full bg-violet/10 text-violet hover:bg-violet hover:text-white transition-colors"
 							>
-								<svg
-									viewBox="0 0 24 24"
-									className="w-4 h-4"
-									fill="none"
-									stroke="currentColor"
-									strokeWidth="1.6"
-								>
+								<svg viewBox="0 0 24 24" className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="1.6">
 									<circle cx="12" cy="12" r="9" />
 									<path d="M8 12h8M12 8v8" />
 								</svg>
@@ -128,11 +117,7 @@ const Intro = () => {
 
 							{/* Spinning circular badge */}
 							<g className="badge-spin">
-								<path
-									id="introBadgeRing"
-									fill="none"
-									d="M 300,270 m -40,0 a 40,40 0 1,1 80,0 a 40,40 0 1,1 -80,0"
-								/>
+								<path id="introBadgeRing" fill="none" d="M 300,270 m -40,0 a 40,40 0 1,1 80,0 a 40,40 0 1,1 -80,0" />
 								<circle
 									cx="300"
 									cy="270"
