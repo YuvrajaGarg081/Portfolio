@@ -1,14 +1,8 @@
-const links = [
-	{
-		linkedin: "",
-	},
-	{
-		github: "github.com/YuvrajAGarg081",
-	},
-	{
-		portfolio: "garginfo.co.in",
-	},
-];
+const links = {
+	linkedin: "https://linkedin.com/in/yuvraj-garg0187",
+	github: "https://github.com/YuvrajAGarg081",
+	portfolio: "https://garginfo.co.in",
+};
 
 const Intro = () => {
 	return (
@@ -61,7 +55,7 @@ const Intro = () => {
 
 						<div className="flex items-centers gap-3">
 							<a
-								href={"https://linkedin.com/in/yuvraj-garg0187"}
+								href={`${links.linkedin}`}
 								aria-label="LindedIn profile"
 								className="w-9 h-9 flex items-center justify-center rounded-full bg-coral/10 text-coral hover:bg-coral hover:text-white transition-colors"
 							>
@@ -74,7 +68,7 @@ const Intro = () => {
 								</svg>
 							</a>
 							<a
-								href={links.github}
+								href={`${links.github}`}
 								aria-label="Code repository"
 								className="w-9 h-9 flex items-center justify-center rounded-full bg-teal/10 text-teal hover:bg-teal hover:text-white transition-colors"
 							>
@@ -84,7 +78,7 @@ const Intro = () => {
 								</svg>
 							</a>
 							<a
-								href={links.portfolio}
+								href={`${links.portfolio}`}
 								aria-label="Portfolio"
 								className="w-9 h-9 flex items-center justify-center rounded-full bg-violet/10 text-violet hover:bg-violet hover:text-white transition-colors"
 							>

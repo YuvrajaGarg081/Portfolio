@@ -1,4 +1,4 @@
-const Footer = (pname) => {
+const Footer = ({ name }) => {
 	return (
 		<footer id="contact" className="border-t border-linesoft">
 			<div className="max-w-355 mx-auto px-[6vw] pt-[7vw] pb-5">
@@ -14,8 +14,7 @@ const Footer = (pname) => {
 					</a>
 				</div>
 				<div className="flex flex-col items-center justify-center md:flex-row gap-3 text-inkdim text-[0.85rem]">
-					{/* <div>© 2026 {pname}</div> */}
-					<div>&copy; 2026 Yuvraj Garg All right are reserved</div>
+					<div>&copy; 2026 {name} All Right are Reserved</div>
 				</div>
 			</div>
 		</footer>
