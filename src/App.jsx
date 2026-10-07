@@ -3,11 +3,13 @@ import Hero from "./components/Main Context/Hero";
 import Footer from "./components/Footer/Footer";
 
 const App = () => {
-	const name = "Yuvraj Garg";
+	const first = "Yuvraj";
+	const last = " Garg";
+	const name = first + last;
 
 	return (
 		<>
-			<Header />
+			<Header first={first} />
 			<Hero />
 			<Footer name={name} />
 		</>

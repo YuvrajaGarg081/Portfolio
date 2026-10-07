@@ -123,23 +123,13 @@ const Intro = () => {
 								/>
 								<text fontSize="8.4" fill="var(--ink-dim)" letterSpacing="1.5">
 									<textPath href="#introBadgeRing" startOffset="0%">
-										PRODUCT DESIGN • WRITING • PRODUCT DESIGN • WRITING •
+										FULL STACK • DEVELOPMENT • FULL STACK • DEVELOPMENT •
 									</textPath>
 								</text>
 							</g>
 						</svg>
 					</div>
 				</div>
-				{/* <div className="relative rounded-lg bg-paper2 border-l-[3px] border-gold px-7 py-6 mt-14 max-w-140 shadow-[0_1px_0_var(--line-soft)]">
-					<div className="flex items-center gap-2.5 mb-2.5">
-						<span className="w-2 h-2 rounded-full bg-teal shadow-[0_0_0_4px_color-mix(in_srgb,var(--teal)_22%,transparent)]" />
-						<span className="text-sm text-inkdim font-medium">currently</span>
-					</div>
-					<p className="text-[0.98rem] leading-relaxed text-ink">
-						Redesigning a budgeting app for freelancers, and slowly writing a long piece about why
-						most personal-finance tools assume a salary.
-					</p>
-				</div> */}
 			</div>
 		</section>
 	);

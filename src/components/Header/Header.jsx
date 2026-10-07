@@ -6,20 +6,18 @@ const LINKS = [
 	{ href: "#skills", label: "Skills" },
 	{ href: "#projects", label: "Projects" },
 	{ href: "#education", label: "Education" },
+	{ href: "#certificate", label: "Certifications" },
 	{ href: "#contact", label: "Contact" },
 ];
 
-const Header = () => {
+const Header = ({ first }) => {
 	const [open, setOpen] = useState(false);
 
 	return (
 		<header className="sticky top-0 z-60 backdrop-blur-md bg-paper/90 border-b border-linesoft">
 			<nav className="max-w-260 mx-auto flex items-center justify-between py-4.5 px-[6vw] relative">
-				<a
-					href="\"
-					className="font-display font-bold tracking-[-0.01em] text-lg text-ink no-underline"
-				>
-					Yuvraj's Portfolio
+				<a href="\" className="font-display font-bold tracking-[-0.01em] text-lg text-ink no-underline">
+					{first}'s Portfolio
 				</a>
 
 				<button
@@ -32,9 +30,7 @@ const Header = () => {
 					<span
 						className={`block w-5.5 h-0.5 bg-ink transition-transform duration-300 ${open ? "translate-y-1.75 rotate-45" : ""}`}
 					/>
-					<span
-						className={`block w-5.5 h-0.5 bg-ink transition-opacity duration-300 ${open ? "opacity-0" : ""}`}
-					/>
+					<span className={`block w-5.5 h-0.5 bg-ink transition-opacity duration-300 ${open ? "opacity-0" : ""}`} />
 					<span
 						className={`block w-5.5 h-0.5 bg-ink transition-transform duration-300 ${open ? "-translate-y-1.75 -rotate-45" : ""}`}
 					/>

@@ -1,3 +1,22 @@
+const tag = {
+	structure: {
+		bstc: "HTML5",
+	},
+	style: {
+		bsty: "CSS3",
+	},
+	responsive: {
+		bresp: "JavaScript",
+	},
+};
+
+const Accent = {
+	coral: { color: "var(--coral)", text: "text-coral" },
+	violet: { color: "var(--violet)", text: "text-violet" },
+	teal: { color: "var(--teal)", text: "text-teal" },
+	goal: { color: "var(--goal)", text: "text-goal" },
+};
+
 const Projs = [
 	{
 		title: "Smart Healthcare System",
@@ -68,7 +87,7 @@ const Projs = [
 		),
 	},
 	{
-		title: "Loose Change",
+		title: "Password Generator",
 		tag: "Product design · 2026",
 		accent: "coral",
 		description: "A budgeting app built for irregular income — designed and shipped end to end.",
@@ -137,20 +156,6 @@ const Projs = [
 	},
 ];
 
-const Accent_var = {
-	coral: "var(--coral)",
-	violet: "var(--violet)",
-	teal: "var(--teal)",
-	goal: "var(--goal)",
-};
-
-const Accent_text = {
-	coral: "text-coral",
-	violet: "text-violet",
-	teal: "text-teal",
-	goal: "text-goal",
-};
-
 const Projects = () => {
 	return (
 		<>
@@ -163,26 +168,25 @@ const Projects = () => {
 					</div>
 
 					<div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-3">
-						{Projs.map((projs) => (
+						{Projs.map((projs) => {
+							const p = Accent[projs.accent];
 							<a
 								key={projs.title}
 								href="#"
 								className="group rounded-lg overflow-hidden border border-linesoft bg-paper2 flex flex-col
               transition-transform duration-200 hover:-translate-y-1"
-								style={{ borderTopColor: Accent_var[projs.accent], borderTopWidth: "3px" }}
+								style={{ borderTopColor: p, borderTopWidth: "3px" }}
 							>
 								<div className="aspect-16/10 border-b border-linesoft">{projs.art}</div>
 								<div className="px-6 py-5">
-									<h3 className="font-display font-semibold text-[1.15rem] m-0 mb-2">
-										{projs.title}
-									</h3>
+									<h3 className="font-display font-semibold text-[1.15rem] m-0 mb-2">{projs.title}</h3>
 									<p className="text-sm text-inkdim leading-relaxed m-0">{projs.description}</p>
 									<span className="inline-block mt-3 5 text-xs font-semibold ${Accent_txt[projs.asscent]}">
 										{projs.tag}
 									</span>
 								</div>
-							</a>
-						))}
+							</a>;
+						})}
 					</div>
 				</div>
 			</section>
