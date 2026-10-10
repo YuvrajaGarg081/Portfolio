@@ -5,10 +5,10 @@ import Projects from "./Projects";
 import Education from "./Education";
 import Certification from "./Certificate";
 
-const Hero = () => {
+const Hero = ({ name }) => {
 	return (
 		<main>
-			<Intro />
+			<Intro name={name} />
 			<About />
 			<Skills />
 			<Projects />

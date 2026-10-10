@@ -4,7 +4,7 @@ const links = {
 	portfolio: "https://garginfo.co.in",
 };
 
-const Intro = () => {
+const Intro = ({ name }) => {
 	return (
 		<section id="home" className="relative isolate overflow-hidden">
 			<div
@@ -22,7 +22,7 @@ const Intro = () => {
 						<div className="flex items-center gap-2 text-inkdim font-medium text-lg mb-2">Hi,</div>
 
 						<h1 className="font-display font-bold text-[clamp(2.2rem,6vw,3.4rem)] leading-[1.15] mb-6">
-							I&rsquo;m <span className="text-coral">Yuvraj Garg</span>
+							I&rsquo;m <span className="text-coral">{name}</span>
 							<br />
 							Full Stack Development
 						</h1>
@@ -56,6 +56,7 @@ const Intro = () => {
 						<div className="flex items-centers gap-3">
 							<a
 								href={`${links.linkedin}`}
+								target="_blank"
 								aria-label="LindedIn profile"
 								className="w-9 h-9 flex items-center justify-center rounded-full bg-coral/10 text-coral hover:bg-coral hover:text-white transition-colors"
 							>
@@ -69,6 +70,7 @@ const Intro = () => {
 							</a>
 							<a
 								href={`${links.github}`}
+								target="_blank"
 								aria-label="Code repository"
 								className="w-9 h-9 flex items-center justify-center rounded-full bg-teal/10 text-teal hover:bg-teal hover:text-white transition-colors"
 							>
@@ -107,7 +109,7 @@ const Intro = () => {
 							/>
 
 							{/* Scattered accents */}
-							<circle cx="300" cy="90" r="12" fill="none" stroke="var(--teal)" strokeWidth="2.4" />
+							<circle cx="300" cy="90" r="12" opacity="50%" fill="none" stroke="var(--teal)" strokeWidth="2.4" />
 
 							{/* Spinning circular badge */}
 							<g className="badge-spin">

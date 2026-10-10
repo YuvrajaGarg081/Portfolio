@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 const tag = {
 	structure: {
 		bstc: "HTML5",
@@ -11,15 +12,26 @@ const tag = {
 };
 
 const Accent = {
-	coral: { color: "var(--coral)", text: "text-coral" },
-	violet: { color: "var(--violet)", text: "text-violet" },
-	teal: { color: "var(--teal)", text: "text-teal" },
-	goal: { color: "var(--goal)", text: "text-goal" },
+	coral: "var(--coral)",
+	violet: "var(--violet)",
+	teal: "var(--teal)",
+	goal: "var(--goal)",
+	// coral: { color: "var(--coral)", text: "text-coral" },
+	// violet: { color: "var(--violet)", text: "text-violet" },
+	// teal: { color: "var(--teal)", text: "text-teal" },
+	// goal: { color: "var(--goal)", text: "text-goal" },
+};
+
+const domain = {
+	full: "fullstack",
+	front: "front",
+	back: "back",
 };
 
 const Projs = [
 	{
 		title: "Smart Healthcare System",
+		link: `/`,
 		tag: "Product design · 2026",
 		accent: "coral",
 		description: "A budgeting app built for irregular income — designed and shipped end to end.",
@@ -43,6 +55,7 @@ const Projs = [
 	},
 	{
 		title: "GYM Workout Buddy",
+		link: `/`,
 		tag: "Side project · 2025",
 		accent: "violet",
 		description: "A minimal note-taking tool for researchers, with offline-first sync.",
@@ -69,6 +82,7 @@ const Projs = [
 	},
 	{
 		title: "Task Manager",
+		link: `/${domain.full}/TaskManager`,
 		tag: "Design system · 2024",
 		accent: "teal",
 		description: "Brand and web design for an independent radio archive project.",
@@ -88,6 +102,7 @@ const Projs = [
 	},
 	{
 		title: "Password Generator",
+		link: `${domain.front}/password-generator`,
 		tag: "Product design · 2026",
 		accent: "coral",
 		description: "A budgeting app built for irregular income — designed and shipped end to end.",
@@ -111,6 +126,7 @@ const Projs = [
 	},
 	{
 		title: "Field Notes",
+		link: `/`,
 		tag: "Side project · 2025",
 		accent: "violet",
 		description: "A minimal note-taking tool for researchers, with offline-first sync.",
@@ -137,6 +153,7 @@ const Projs = [
 	},
 	{
 		title: "Signal House",
+		link: `/`,
 		tag: "Design system · 2024",
 		accent: "teal",
 		description: "Brand and web design for an independent radio archive project.",
@@ -165,28 +182,31 @@ const Projects = () => {
 						<h2 className="font-display font-bold tracking-[-0.01em] text-[clamp(1.6rem,3.2vw,2.2rem)] m-0">
 							Projects
 						</h2>
+						<p className="rounded-full">
+							<button className="bg-white" onClick={`${domain.front}`}>Front</button>
+							<button className="bg-white" onClick={`${domain.full}`}>FullStack</button>
+						</p>
 					</div>
 
 					<div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-3">
-						{Projs.map((projs) => {
-							const p = Accent[projs.accent];
-							<a
+						{Projs.map((projs) => (
+							<Link
+								to={`/${projs.link}`}
 								key={projs.title}
-								href="#"
 								className="group rounded-lg overflow-hidden border border-linesoft bg-paper2 flex flex-col
               transition-transform duration-200 hover:-translate-y-1"
-								style={{ borderTopColor: p, borderTopWidth: "3px" }}
+								style={{ borderTopColor: Accent[projs.accent], borderTopWidth: "3px" }}
 							>
 								<div className="aspect-16/10 border-b border-linesoft">{projs.art}</div>
 								<div className="px-6 py-5">
 									<h3 className="font-display font-semibold text-[1.15rem] m-0 mb-2">{projs.title}</h3>
 									<p className="text-sm text-inkdim leading-relaxed m-0">{projs.description}</p>
-									<span className="inline-block mt-3 5 text-xs font-semibold ${Accent_txt[projs.asscent]}">
+									<span className={`inline-block mt-3 5 text-xs font-semibold ${Accent[projs.asscent]}`}>
 										{projs.tag}
 									</span>
 								</div>
-							</a>;
-						})}
+							</Link>
+						))}
 					</div>
 				</div>
 			</section>
