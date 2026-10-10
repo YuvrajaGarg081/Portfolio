@@ -1,18 +1,13 @@
-import Header from "./components/Header/Header";
-import Hero from "./components/Main Context/Hero";
-import Footer from "./components/Footer/Footer";
+import { Routes, Route } from "react-router";
+import Home from "./assets/Home";
+import Comimg from "./assets/coming";
 
 const App = () => {
-	const first = "Yuvraj";
-	const last = " Garg";
-	const name = first + last;
-
 	return (
-		<>
-			<Header first={first} />
-			<Hero />
-			<Footer name={name} />
-		</>
+		<Routes>
+			<Route path="/" element={<Home />} />
+			<Route path="/front/password-generator" element={<Comimg />} />
+		</Routes>
 	);
 };
 
