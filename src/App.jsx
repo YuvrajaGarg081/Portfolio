@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router";
 import Home from "./assets/Home";
-import Comimg from "./assets/coming";
+import Comimg from "./assets/Coming";
 
 const App = () => {
 	return (
