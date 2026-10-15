@@ -9,7 +9,7 @@ const Hero = ({ name }) => {
 	return (
 		<main>
 			<Intro name={name} />
-			<About />
+			<About name={name} />
 			<Skills />
 			<Projects />
 			<Education />

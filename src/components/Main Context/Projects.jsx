@@ -12,14 +12,10 @@ const tag = {
 };
 
 const Accent = {
-	coral: "var(--coral)",
-	violet: "var(--violet)",
-	teal: "var(--teal)",
-	goal: "var(--goal)",
-	// coral: { color: "var(--coral)", text: "text-coral" },
-	// violet: { color: "var(--violet)", text: "text-violet" },
-	// teal: { color: "var(--teal)", text: "text-teal" },
-	// goal: { color: "var(--goal)", text: "text-goal" },
+	coral: { border: "border-t-coral", text: "text-coral" },
+	violet: { border: "border-t-violet", text: "text-violet" },
+	teal: { border: "border-t-teal", text: "text-teal" },
+	goal: { border: "border-t-goal", text: "text-goal" },
 };
 
 const domain = {
@@ -82,7 +78,7 @@ const Projs = [
 	},
 	{
 		title: "Task Manager",
-		link: `/${domain.full}/TaskManager`,
+		link: `${domain.full}/TaskManager`,
 		tag: "Design system · 2024",
 		accent: "teal",
 		description: "Brand and web design for an independent radio archive project.",
@@ -178,35 +174,39 @@ const Projects = () => {
 		<>
 			<section id="projects" className="border border-linesoft">
 				<div className="max-w-355 mx-auto px-[6vw] pt-[5vw] pb-[7vw]">
-					<div className="flex items-center justify-center mb-10">
+					<div className="flex items-center justify-center mb-5">
 						<h2 className="font-display font-bold tracking-[-0.01em] text-[clamp(1.6rem,3.2vw,2.2rem)] m-0">
 							Projects
 						</h2>
-						<p className="rounded-full">
-							<button className="bg-white" onClick={`${domain.front}`}>Front</button>
-							<button className="bg-white" onClick={`${domain.full}`}>FullStack</button>
+					</div>
+					<div className="flex items-center justify-center mb-5">
+						<p className="rounded-full border border-white px-6.25 py-1.5">
+							<Link className="border-2 bg-gray-600 text-coral rounded-xl px-1.25 py-[0.5px]" to={`${domain.front}`}>
+								Front
+							</Link>
+							<Link className="bg-gray-600 text-gold rounded-xl" to={`/${domain.full}`}>
+								FullStack
+							</Link>
 						</p>
 					</div>
 
 					<div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-3">
-						{Projs.map((projs) => (
+						{Projs.map((projs) => {
+							const accent = Accent[projs.accent];
 							<Link
 								to={`/${projs.link}`}
 								key={projs.title}
-								className="group rounded-lg overflow-hidden border border-linesoft bg-paper2 flex flex-col
-              transition-transform duration-200 hover:-translate-y-1"
-								style={{ borderTopColor: Accent[projs.accent], borderTopWidth: "3px" }}
+								className={`group rounded-lg border-t-[3px] overflow-hidden border border-linesoft ${accent.border} bg-paper2 flex flex-col
+              transition-transform duration-200 hover:-translate-y-1`}
 							>
 								<div className="aspect-16/10 border-b border-linesoft">{projs.art}</div>
 								<div className="px-6 py-5">
-									<h3 className="font-display font-semibold text-[1.15rem] m-0 mb-2">{projs.title}</h3>
+									<h3 className={`font-display font-semibold text-[1.15rem] ${accent.text} m-0 mb-2`}>{projs.title}</h3>
 									<p className="text-sm text-inkdim leading-relaxed m-0">{projs.description}</p>
-									<span className={`inline-block mt-3 5 text-xs font-semibold ${Accent[projs.asscent]}`}>
-										{projs.tag}
-									</span>
+									<span className={`inline-block mt-3 5 text-xs font-semibold ${accent.border}`}>{projs.tag}</span>
 								</div>
-							</Link>
-						))}
+							</Link>;
+						})}
 					</div>
 				</div>
 			</section>

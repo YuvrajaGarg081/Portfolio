@@ -1,35 +1,41 @@
 @import "tailwindcss";
 
 @theme {
+	--color-plane: var(--plane);
+	--color-dark: var(--dark);
+	--color-tint: var(--tint);
 	--color-paper: var(--paper);
-	--color-paper2: var(--paper-2);
+	--color-paper2: var(--paper2);
 	--color-ink: var(--ink);
-	--color-inkdim: var(--ink-dim);
+	--color-inkdim: var(--inkdim);
+	--color-line: var(--line);
+	--color-linesoft: var(--linesoft);
 	--color-coral: var(--coral);
 	--color-teal: var(--teal);
 	--color-violet: var(--violet);
 	--color-gold: var(--gold);
-	--color-line: var(--line);
-	--color-linesoft: var(--line-soft);
-	--color-accent1: var(--accent1);
-	--color-accent2: var(--accent2);
-	--color-accent3: var(--accent3);
-	--color-accent4: var(--accent4);
-	--color-accent5: var(--accent5);
-	--color-accent6: var(--accent6);
-	--screens-md: "760px";
+	--color-cobalt: var(--cobalt);
+	--color-emerald: var(--emerald);
+	--color-fuchsia: var(--fuchsia);
+	--color-amber: var(--amber);
+	--color-crimson: var(--crimson);
+	--color-cyan: var(--cyan);
+	--screens-md: "768px";
 	--font-display: /*"Manrope",*/ sans-serif;
 	--font-body: /*"Work Sans",*/ sans-serif;
 }
 
 /* ===== Shared design tokens ===== */
 :root {
+	--plane: #fff;
+	--dark: #1a2fa8;
+	--tint: #eef1ff;
 	--paper: #fbfaf6;
-	--paper-2: #f2f0e8;
+	--paper2: #f2f0e8;
 	--ink: #171522;
-	--ink-dim: #5c5a6e;
+	--inkdim: #5c5a6e;
 	--line: #e4e1d4;
-	--line-soft: #ece9dc;
+	--linesoft: #ece9dc;
 	--coral: #ff5a3c;
 	--teal: #0e8f82;
 	--violet: #5b44e0;
@@ -44,11 +50,11 @@
 @media (prefers-color-scheme: dark) {
 	:root:not([data-theme="light"]) {
 		--paper: #15131f;
-		--paper-2: #1d1a2b;
+		--paper2: #1d1a2b;
 		--ink: #f4f2ea;
-		--ink-dim: #a9a6bc;
+		--inkdim: #a9a6bc;
 		--line: #332f45;
-		--line-soft: #282438;
+		--linesoft: #282438;
 		--coral: #ff7a5c;
 		--teal: #2bc4b3;
 		--violet: #8a79ff;
@@ -63,11 +69,11 @@
 }
 :root[data-theme="dark"] {
 	--paper: #15131f;
-	--paper-2: #1d1a2b;
+	--paper2: #1d1a2b;
 	--ink: #f4f2ea;
-	--ink-dim: #a9a6bc;
+	--inkdim: #a9a6bc;
 	--line: #332f45;
-	--line-soft: #282438;
+	--linesoft: #282438;
 	--coral: #ff7a5c;
 	--teal: #2bc4b3;
 	--violet: #8a79ff;
@@ -81,11 +87,11 @@
 }
 :root[data-theme="light"] {
 	--paper: #fbfaf6;
-	--paper-2: #f2f0e8;
+	--paper2: #f2f0e8;
 	--ink: #171522;
-	--ink-dim: #5c5a6e;
+	--inkdim: #5c5a6e;
 	--line: #e4e1d4;
-	--line-soft: #ece9dc;
+	--linesoft: #ece9dc;
 	--coral: #ff5a3c;
 	--teal: #0e8f82;
 	--violet: #5b44e0;
@@ -98,6 +104,7 @@ html {
 body {
 	background: var(--paper);
 	color: var(--ink);
+	overflow-x: hidden;
 }
 ::selection {
 	background: var(--coral);

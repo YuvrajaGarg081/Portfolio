@@ -1,3 +1,5 @@
+// import profile from "../../assets/img/Yuvraj_Garg.jpeg";
+
 const links = {
 	linkedin: "https://linkedin.com/in/yuvraj-garg0187",
 	github: "https://github.com/YuvrajAGarg081",
@@ -92,43 +94,32 @@ const Intro = ({ name }) => {
 						</div>
 					</div>
 
-					<div className="relative" aria-hidden="true">
+					<div className="" aria-hidden="true">
 						<svg viewBox="0 0 400 400" className="w-full h-auto max-w-95 mx-auto">
-							<path
-								transform="translate(210,190) rotate(18) scale(2.1)"
-								fill="none"
-								stroke="var(-violet)"
-								strokeWidth="1.4"
-								opacity="0.55"
-								d="M45.7,-58.3C5.8,-49.6,68.4,-34.4,72.7,-17.5C77,-0.6,76,17.9,68.1,32.6C,60.3,47.3,45.6,58.1,29.4,64,2C13.2,70.3,-4.5,71.6,-21.1,67.2C-37.7,62.8,-53.2,52.6,-63.1,38.1C-73,23.6,-77.3,4.8,-74.1,-12.5C-70.9,-29.8,-60.2,-45.6,-46,-54.5C-31.8,-63.4,-15.9,-65.4,0.9,-66.6C17.7,-67.8,35.5,-68.2,45.7,-58.3Z"
-							/>
-							<path
-								transform="translate(190,205) rotate(-10) scale(2.05)"
-								fill="var(--coral)"
-								d="M42.1,-54.8C54.4,-46.3,63.5,-32.7,67.6,-17.2C71.7,-1.7,70.8,15.7,63.2,29.9C55.6,44.1,41.3,55.1,25.6,61.4C9.9,67.7,-7.2,69.3,-23.1,64.8C-39,60.3,-53.7,49.7,-62.4,35.2C-71.1,20.7,-73.8,2.3,-70,-14.6C-66.2,-31.5,-55.9,-46.9,-42.1,-55.3C-28.3,-63.7,-14.2,-65.1,0.8,-66.3C15.7,-67.5,29.8,-63.3,42.1,-54.8Z"
-							/>
+							<svg width={160} height={160} viewBox="0 0 160 160">
+								<defs>
+									<clipPath id="c">
+										<circle cx={80} cy={80} r={80} />
+									</clipPath>
+								</defs>
+								<circle cx={80} cy={80} r={80} fill="var(--linesoft)" />
+								<g clipPath="">
+									<circle cx={80} cy={62} r={28} fill="var(--line)" />
+									<ellipse cx={80} cy={160} rx={55} ry={52} fill="var(--plane)" />
+								</g>
+							</svg>
+
+							<text fontSize={"8.4"} fill="var(--inkdim)" className="font-display" letterSpacing="1.5">
+								<textPath href="#ringPath" textLength="750" lengthAdjust="spacing">
+									FULL STACK • DEVELOPMENT • FULL STACK • DEVELOPMENT •{" "}
+								</textPath>
+								<text fontSize="8.4">
+									<textPath href="#introBadgeRing" startOffset="0%"></textPath>
+								</text>
+							</text>
 
 							{/* Scattered accents */}
 							<circle cx="300" cy="90" r="12" opacity="50%" fill="none" stroke="var(--teal)" strokeWidth="2.4" />
-
-							{/* Spinning circular badge */}
-							<g className="badge-spin">
-								<path id="introBadgeRing" fill="none" d="M 300,270 m -40,0 a 40,40 0 1,1 80,0 a 40,40 0 1,1 -80,0" />
-								<circle
-									cx="300"
-									cy="270"
-									r="40"
-									fill="var(--paper)"
-									stroke="var(--line)"
-									strokeWidth="1"
-									strokeDasharray="2 4"
-								/>
-								<text fontSize="8.4" fill="var(--ink-dim)" letterSpacing="1.5">
-									<textPath href="#introBadgeRing" startOffset="0%">
-										FULL STACK • DEVELOPMENT • FULL STACK • DEVELOPMENT •
-									</textPath>
-								</text>
-							</g>
 						</svg>
 					</div>
 				</div>
