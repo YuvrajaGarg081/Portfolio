@@ -4,7 +4,7 @@ const About = ({ name }) => {
 	return (
 		<>
 			<section id="about" className="border-t border-linesoft">
-				<div className="max-w-355 mx-auto px[6vw] pt-[5vw] pb-[7vw]">
+				<div className="max-w-355 mx-auto px-[6vw] pt-[5vw] pb-[7vw]">
 					<div className="flex items-center justify-center mb-10">
 						<h2 className="font-display font-bold tracking-[-0.01em] text-[clamp(1.6rem,3.2vw,2.2rem)] m-0">About</h2>
 					</div>
@@ -12,9 +12,10 @@ const About = ({ name }) => {
 						<p className="text-inkdim text-[1.05rem mb-[1.1rem]">
 							Hi, I'm {name}, a junior full stack developer who loves turning ideas into web apps people can actually
 							use.
-							<br />I work with the MERN Stack (MongoDB, ExpressJS, ReactJS and NodeJS) and style my interfaces with
-							Bootstrap and TailwindCSS. I like having a hand in every layer of a project, from designing the database
-							and building RESTAPIs to crafting a clean, user-friendly front end.
+							<br />I work with the <b>MERN Stack</b> (MongoDB, ExpressJS, ReactJS and NodeJS) and style my interfaces
+							with
+							<b> Bootstrap</b> and <b> TailwindCSS </b>. I like having a hand in every layer of a project, from
+							designing the database and building RESTAPIs to crafting a clean, user-friendly front end.
 							<br />
 							One project I&rsquo;m proud of is the Smart Healthcare Appointment System,a platform for booking and
 							mananging patients appointments. It taught me alot about structuring data, handling authentication, and
