@@ -31,7 +31,7 @@ const About = ({ name }) => {
 					<div className="flex w-full max-w-md flex-col items-stretch gap-3 p-6 sm:max-w-none sm:flex-row sm:flex-wrap sm:items-center sm:justify-center">
 						<a
 							href="#projects"
-							className="flex w-full max-w-md flex-col items-center justify-center gap-2 overflow-hidden rounded-xl bg-crimson px-6 py-3.5 font-semibold text-white shadow-lg shadow-crimson/30 transition hover:shadow-xl hover:shadow-crimson/40 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-crimson/40 focus-visible:ring-offset-2 focus-visible:ring-offset-white active:translate-y-px motion-reduce:transition-none dark:focus-visible:ring-offset-slate-950"
+							className="flex w-50 max-w-md flex-col items-center justify-center gap-2 overflow-hidden rounded-xl bg-crimson px-6 py-3 font-semibold text-white shadow-lg shadow-crimson/30 transition hover:shadow-xl hover:shadow-crimson/40 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-crimson/40 focus-visible:ring-offset-2 focus-visible:ring-offset-white active:translate-y-px motion-reduce:transition-none dark:focus-visible:ring-offset-slate-950"
 						>
 							<span className="relative">View My Projects</span>
 						</a>

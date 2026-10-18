@@ -1,9 +1,10 @@
-// import profile from "../../assets/img/Yuvraj_Garg.jpeg";
+import profile from "../../assets/img/Yuvraj_Garg.png";
 
 const links = {
 	linkedin: "https://linkedin.com/in/yuvraj-garg0187",
 	github: "https://github.com/YuvrajAGarg081",
 	portfolio: "https://garginfo.co.in",
+	leetcode: "https://leetcode.com/u/YuvrajGarg/",
 };
 
 const Intro = ({ name }) => {
@@ -15,7 +16,7 @@ const Intro = ({ name }) => {
 			/>
 
 			<div className="max-w-260 mx-auto px-[6vw] pt-[9vw] pd-[7vw]">
-				<div className="grid grid-cols-1 md:grid-cols-[1fr_0.9fr] gap-12 md:gap-[4vw] items-center">
+				<div className="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-12 md:gap-[4vw] items-center">
 					<div>
 						<div className="inline-flex item-center gap-2 rounded-full bg-paper2 border border-line px-3.5 py-1.5 mb-6">
 							<span className="w-1.5 h-1.5 rounded-full bg-teal shadow-[0_0_0_3px_color-mix(in_srgb,var(--teal)_22%,transparent)]" />{" "}
@@ -54,13 +55,13 @@ const Intro = ({ name }) => {
 								<polyline points="13 6 19 12 13 18" />
 							</svg>
 						</a>
-
-						<div className="flex items-centers gap-3">
+						{/* External Links */}
+						<div className="flex items-center gap-3">
 							<a
 								href={`${links.linkedin}`}
 								target="_blank"
 								aria-label="LindedIn profile"
-								className="w-9 h-9 flex items-center justify-center rounded-full bg-coral/10 text-coral hover:bg-coral hover:text-white transition-colors"
+								className="w-9 h-9 flex items-center justify-center rounded-full bg-cobalt/10 text-cobalt hover:bg-cobalt hover:text-white transition-colors"
 							>
 								<svg viewBox="0 0 24 24" className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="1.6">
 									<rect x={3} y={3} width={18} height={18} rx={3} />
@@ -91,36 +92,67 @@ const Intro = ({ name }) => {
 									<path d="M8 12h8M12 8v8" />
 								</svg>
 							</a>
+							<a
+								href={`${links.leetcode}`}
+								target="_blank"
+								aria-label="Leetcode"
+								className="w-9 h-9 flex items-center justify-center rounded-full bg-"
+							>
+								<svg
+									viewBox="0 0 24 24"
+									className="w-4 h-4"
+									fill="none"
+									stroke="currentColor"
+									strokeWidth="1.6"
+									strokeLinecap="round"
+									strokeLinejoin="round"
+								>
+									<path d="M14 3L6.2 11.4A4.4 4.4 0 0 0 6.6 17.6L8.8 19.7A4.4 4.4 0 0 0 15 19.6L17 17.6" />
+									<path d="M11 13H20" />
+								</svg>
+							</a>
 						</div>
 					</div>
-
-					<div className="" aria-hidden="true">
-						<svg viewBox="0 0 400 400" className="w-full h-auto max-w-95 mx-auto">
-							<svg width={160} height={160} viewBox="0 0 160 160">
+					<div>
+						{/* Profile Area */}
+						<div className="inline-flex items-center justify-center w-full h-auto max-w-95 mx-auto">
+							<svg width={300} height={300} viewBox="200 30 280 280">
 								<defs>
-									<clipPath id="c">
-										<circle cx={80} cy={80} r={80} />
-									</clipPath>
+									<path id="ringPath" d="M220 170 a120 120 0 1 1 240 0 a120 120 0 1 1 -240 0" />
 								</defs>
-								<circle cx={80} cy={80} r={80} fill="var(--linesoft)" />
-								<g clipPath="">
-									<circle cx={80} cy={62} r={28} fill="var(--line)" />
-									<ellipse cx={80} cy={160} rx={55} ry={52} fill="var(--plane)" />
+
+								<clipPath id="photoClip">
+									<circle cx="340" cy="170" r="106" />
+								</clipPath>
+								<circle cx="340" cy="170" r="106" fill="var(--coral)" />
+
+								<image
+									href={profile}
+									x={250}
+									y={80}
+									width={180}
+									height={180}
+									// preserveAspectRatio="xMidYMid slice"
+									clip-path="url(#photoClip)"
+								/>
+
+								<g>
+									<animateTransform
+										attributeName="transform"
+										type="rotate"
+										from="0 340 170"
+										to="360 340 170"
+										dur="16s"
+										repeatCount="indefinite"
+									/>
+									<text fontSize={"8.4"} fill="var(--coral)" className="font-display" letterSpacing="1.5">
+										<textPath href="#ringPath" textLength="740">
+											FULL STACK • DEVELOPMENT • FULL STACK • DEVELOPMENT •{" "}
+										</textPath>
+									</text>
 								</g>
 							</svg>
-
-							<text fontSize={"8.4"} fill="var(--inkdim)" className="font-display" letterSpacing="1.5">
-								<textPath href="#ringPath" textLength="750" lengthAdjust="spacing">
-									FULL STACK • DEVELOPMENT • FULL STACK • DEVELOPMENT •{" "}
-								</textPath>
-								<text fontSize="8.4">
-									<textPath href="#introBadgeRing" startOffset="0%"></textPath>
-								</text>
-							</text>
-
-							{/* Scattered accents */}
-							<circle cx="300" cy="90" r="12" opacity="50%" fill="none" stroke="var(--teal)" strokeWidth="2.4" />
-						</svg>
+						</div>
 					</div>
 				</div>
 			</div>
